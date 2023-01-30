@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Synopsys Action
-        uses: synopsys-sig/synopsys-action@<version>
+        uses: synopsys-sig/synopsys-action@main
         with:
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
