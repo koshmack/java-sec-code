@@ -6,7 +6,7 @@ shared:
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: maven:3.8.5-openjdk-17
+  image: maven:3.8.5-openjdk-17-slim
 
 # Job definition block
 # "main" is a default job that all pipelines have
