@@ -1,12 +1,13 @@
 # inherit. In our example, we state that all our Jobs will use the same Docker
 # container for building in.
-#shared:
+shared:
   # Docker image to use as the desired build container. This typically takes the
   # form of "repo_name". Alternatively, you can define the image as
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
   #image: maven:3.8.5-openjdk-17-slim
+  image: buildpack-deps
 
 # Job definition block
 # "main" is a default job that all pipelines have
