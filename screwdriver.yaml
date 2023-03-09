@@ -6,7 +6,7 @@ shared:
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: maven:3.8.5-openjdk-17-slim
+  image: maven:3.8.5-openjdk-17
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -32,8 +32,8 @@ jobs:
       - export: export BRINGUP="We're bringing up the build env now!"
       - console: echo $BRINGUP
       - sleep: sleep 300
-      - apt-update: apt-get update
-      - xzutils-install: apt-get install -y xz-utils git
+      #- apt-update: apt-get update
+      #- xzutils-install: apt-get install -y xz-utils git
       - mkdir: mkdir -p /opt/node
       - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz -o /opt/node/node-v16.16.0-linux-x64.tar.xz
       - tar: tar -xJf /opt/node/node-v16.16.0-linux-x64.tar.xz
