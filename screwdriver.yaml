@@ -31,7 +31,9 @@ jobs:
       # the same job (as shown below).
       - export: export BRINGUP="We're bringing up the build env now!"
       - console: echo $BRINGUP
-      - xz_utils: apt-get update && apt-get install -y xz-utils git
+      - sleep: sleep 300
+      - apt-update: apt-get update
+      - xzutils-install: apt-get install -y xz-utils git
       - mkdir: mkdir -p /opt/node
       - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz -o /opt/node/node-v16.16.0-linux-x64.tar.xz
       - tar: tar -xJf /opt/node/node-v16.16.0-linux-x64.tar.xz
