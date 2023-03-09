@@ -1,12 +1,12 @@
 # inherit. In our example, we state that all our Jobs will use the same Docker
 # container for building in.
-shared:
+#shared:
   # Docker image to use as the desired build container. This typically takes the
   # form of "repo_name". Alternatively, you can define the image as
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: maven:3.8.5-openjdk-17-slim
+  #image: maven:3.8.5-openjdk-17-slim
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -31,11 +31,11 @@ jobs:
       # the same job (as shown below).
       - export: export BRINGUP="We're bringing up the build env now!"
       - console: echo $BRINGUP
-      - xz_utils: apt-get update && apt-get install -y xz-utils git
-      - mkdir: mkdir -p /opt/node
-      - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz | tar -xJf - -C /opt/node
-      - path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
-      - test: node --version 
+      #- xz_utils: apt-get update && apt-get install -y xz-utils git
+      #- mkdir: mkdir -p /opt/node
+      #- node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz | tar -xJf - -C /opt/node
+      #- path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
+      #- test: node --version 
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
@@ -50,8 +50,8 @@ jobs:
       # command.
       - export: export BUILDING="We are building now!"
       - console: echo $BUILDING
-      - clean: mvn clean
-      - build: mvn compile
+      #- clean: mvn clean
+      #- build: mvn compile
       # You can get metadata that was set using the command "meta get <key>".
       #- get-metadata: meta get example
       # The "run_arbitrary_script" executes a script. This is an alternative to
