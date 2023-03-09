@@ -6,7 +6,7 @@ shared:
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: mk-openjdk17-maven3-node16
+  image: maven:3.8.5-openjdk-17-slim
 
 # Job definition block
 # "main" is a default job that all pipelines have
@@ -31,6 +31,11 @@ jobs:
       # the same job (as shown below).
       - export: export BRINGUP="We're bringing up the build env now!"
       - console: echo $BRINGUP
+      - xz_utils: apt-get update && apt-get install -y xz-utils git
+      - mkdir: mkdir -p /opt/node
+      - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz | tar -xJf - -C /opt/node
+      - path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
+      - test: node --version 
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
@@ -58,4 +63,5 @@ jobs:
     steps:
       - export: export TESTING="We are SASTing now!"
       - console: echo $TESTING
-      - teardown-test: echo "Good-bye" 
+      - teardown-1: echo "Good-bye"
+      - teardown-2: rm -rf /var/lib/apt/lists/* 
