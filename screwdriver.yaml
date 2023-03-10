@@ -39,7 +39,7 @@ jobs:
       #- sleep: sleep 300 
       - tar: tar -xzf /opt/node/node-v16.16.0-linux-x64.tar.gz
       - path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
-      - test: echo "Node version: $(node --version)" 
+      - test: echo "$(node --version)" 
       # Metadata is a structured key/value storage of relevant information about a build. 
       # Metadata will be shared with subsequent builds in the same workflow.
       # You can set any key using the command "meta set <key> <value>".
