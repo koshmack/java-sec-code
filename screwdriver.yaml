@@ -36,6 +36,7 @@ jobs:
       #- xzutils-install: apt-get install -y xz-utils git
       - mkdir: mkdir -p /opt/node
       - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.gz -o /opt/node/node-v16.16.0-linux-x64.tar.gz
+      - sleep: sleep 300 
       - tar: tar -xzf /opt/node/node-v16.16.0-linux-x64.tar.xz
       - path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
       - test: node --version 
