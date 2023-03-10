@@ -31,12 +31,12 @@ jobs:
       # the same job (as shown below).
       - export: export BRINGUP="We're bringing up the build env now!"
       - console: echo $BRINGUP
-      - sleep: sleep 300
+      #- sleep: sleep 300
       #- apt-update: apt-get update
       #- xzutils-install: apt-get install -y xz-utils git
       - mkdir: mkdir -p /opt/node
-      - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.xz -o /opt/node/node-v16.16.0-linux-x64.tar.xz
-      - tar: tar -xJf /opt/node/node-v16.16.0-linux-x64.tar.xz
+      - node: curl -fsSL https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-x64.tar.gz -o /opt/node/node-v16.16.0-linux-x64.tar.gz
+      - tar: tar -xzf /opt/node/node-v16.16.0-linux-x64.tar.xz
       - path: PATH="${PATH}:/opt/node/node-v16.16.0-linux-x64/bin"
       - test: node --version 
       # Metadata is a structured key/value storage of relevant information about a build. 
