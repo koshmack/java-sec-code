@@ -2,7 +2,7 @@ name: Synopsys Security Testing for Black Duck
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master, main, demo-dev ]
 
   pull_request:
     branches: [ master, main ]
