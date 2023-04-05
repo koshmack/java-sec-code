@@ -34,7 +34,7 @@ jobs:
           # multiple parameters
           blackduck_scan_failure_severities: "BLOCKER"
           #blackduck_scan_failure_severities: "BLOCKER,CRITICAL,TRIVIAL"
-          blackduck_automation_prcomment: true
+          #blackduck_automation_prcomment: true
           # Optional parameter, but usually specified - the location of the Synopsys Bridge software
           # The Synopsys Bridge software distribution is platform specific - this must match the host OS
           # of your runner. For example in this case, we are using the latest version for Linux.
