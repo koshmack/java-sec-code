@@ -27,12 +27,12 @@ jobs:
           github_token: ${{ secrets.MY_GITHUB_TOKEN }}
           # Optional parameter. By default, create fix pull requests if vulnerabilities are reported
           # Passing false will disable fix pull request creation 
-          blackduck_automation_fixpr: false
+          blackduck_automation_fixpr: true
           # Optional parameter. The values could be. ALL|NONE|BLOCKER|CRITICAL|MAJOR|MINOR|OK|TRIVIAL|UNSPECIFIED
           # Single parameter
           #blackduck_scan_failure_severities: "ALL"
           # multiple parameters
-          blackduck_scan_failure_severities: "BLOCKER"
+          blackduck_scan_failure_severities: "NONE"
           #blackduck_scan_failure_severities: "BLOCKER,CRITICAL,TRIVIAL"
           blackduck_automation_prcomment: true
           # Optional parameter, but usually specified - the location of the Synopsys Bridge software
