@@ -5,7 +5,7 @@ on:
     branches: [ master, main, demo-dev ]
 
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, main, demo-dev ]
 
 jobs:
   build:
