@@ -39,4 +39,3 @@ jobs:
           # The Synopsys Bridge software distribution is platform specific - this must match the host OS
           # of your runner. For example in this case, we are using the latest version for Linux.
           #bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
-          github_repository_branch.name: "demo-dev"
