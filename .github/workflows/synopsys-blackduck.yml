@@ -41,4 +41,4 @@ jobs:
           # of your runner. For example in this case, we are using the latest version for Linux.
           #bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
         env:
-          BLACKDUCK_PROJECT_NAME: ${{ vars.BLACKDUCK_PROJECT }}
+          DETECT_PROJECT_NAME: ${{ vars.BLACKDUCK_PROJECT }}
