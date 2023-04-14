@@ -41,5 +41,6 @@ jobs:
           # of your runner. For example in this case, we are using the latest version for Linux.
           #bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
         env:
-          DETECT_PROJECT_NAME: ${{ vars.BLACKDUCK_PROJECT }}
-          DETECT_PROJECT_VERSION_NAME: ${{ vars.GITHUB_JOB }}
+          #DETECT_PROJECT_NAME: ${{ vars.BLACKDUCK_PROJECT }}
+          #DETECT_PROJECT_VERSION_NAME: ${{ vars.GITHUB_JOB }}
+          DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
