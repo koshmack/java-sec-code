@@ -42,9 +42,9 @@ jobs:
 
           polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_application_name: ${{ POLARIS_APPLICATION_NAME }}
-          polaris_project_name: ${{ POLARIS_PROJECT_NAME }}
-          polaris_assessment_types: ${{ POLARIS_ASSESSMENT_TYPES }}
+          polaris_application_name: ${{ vars.POLARIS_APPLICATION_NAME }}
+          polaris_project_name: ${{ vars.POLARIS_PROJECT_NAME }}
+          polaris_assessment_types: ${{ vars.POLARIS_ASSESSMENT_TYPES }}
           # Waiting for automation
           #polaris_automation_fixpr: false
           #polaris_automation_prcomment: true
