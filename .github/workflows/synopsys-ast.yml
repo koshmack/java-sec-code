@@ -22,10 +22,6 @@ jobs:
           java-version: 11
           distribution: microsoft
           cache: maven
-      - name: Install tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install gzip
       #- name: Synopsys Action Black Duck
       #  uses: synopsys-sig/synopsys-action@main
       #  with:
