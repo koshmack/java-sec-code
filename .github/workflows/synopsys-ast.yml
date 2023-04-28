@@ -25,7 +25,7 @@ jobs:
       #- name: Synopsys Action Black Duck
       #  uses: synopsys-sig/synopsys-action@main
       #  with:
-      #    GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      #    github_token: ${{ secrets.GITHUB_TOKEN }}
           
       #    blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
       #    blackduck_url: ${{ secrets.BLACKDUCK_URL }}
@@ -41,16 +41,16 @@ jobs:
       #    DETECT_PROJECT_VERSION_NAME: demo-dev
       #    BLACKDUCK_TRUST_CERT: true
           #DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
-      #- name: Synopsys Action Polaris
-      #  uses: synopsys-sig/synopsys-action@main
-      #  with:
-      #    GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      - name: Synopsys Action Polaris
+        uses: synopsys-sig/synopsys-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      #    polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
-      #    polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-      #    polaris_application_name: ${{ vars.POLARIS_APPLICATION_NAME }}
-      #    polaris_project_name: ${{ vars.POLARIS_PROJECT_NAME }}
-      #    polaris_assessment_types: ${{ vars.POLARIS_ASSESSMENT_TYPES }}
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+          polaris_application_name: ${{ vars.POLARIS_APPLICATION_NAME }}
+          polaris_project_name: ${{ vars.POLARIS_PROJECT_NAME }}
+          polaris_assessment_types: ${{ vars.POLARIS_ASSESSMENT_TYPES }}
           # Waiting for automation
           #polaris_automation_fixpr: false
           #polaris_automation_prcomment: true
@@ -58,16 +58,16 @@ jobs:
           # The Synopsys Bridge software distribution is platform specific - this must match the host OS
           # of your runner. For example in this case, we are using the latest version for Linux.
           #bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
-      - name: Synopsys Action Coverity
-        uses: synopsys-sig/synopsys-action@v1.1.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Synopsys Action Coverity
+      #  uses: synopsys-sig/synopsys-action@v1.1.0
+      #  with:
+      #    github_token: ${{ secrets.GITHUB_TOKEN }}
 
-          coverity_url: ${{ secrets.COVERITY_URL }}
-          coverity_user: ${{ secrets.COVERITY_USER }}
-          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          coverity_project_name: ${{ vars.COVERITY_PROJECT_NAME }}
-          coverity_stream_name: ${{ github.event.repository.name }}-${{ github.base_ref }}
+      #    coverity_url: ${{ secrets.COVERITY_URL }}
+      #    coverity_user: ${{ secrets.COVERITY_USER }}
+      #    coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+      #    coverity_project_name: ${{ vars.COVERITY_PROJECT_NAME }}
+      #    coverity_stream_name: ${{ github.event.repository.name }}-${{ github.base_ref }}
           # Optionally you may specify the ID number of a saved view to apply as a "break the build" policy.
           # If any defects are found within this view when applied to the project, the build will be failed
           # with an exit code.
