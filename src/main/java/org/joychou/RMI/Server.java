@@ -20,7 +20,7 @@ public class Server implements Hello {
             LocateRegistry.createRegistry(1099);
             Registry registry = LocateRegistry.getRegistry();
             registry.bind("Hello", stub);
-            System.out.println("绑定1099端口成功");
+            System.out.println("绑定1099端口成功. It is probably saying successful creation of registory.");
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
