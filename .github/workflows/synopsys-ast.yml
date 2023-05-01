@@ -22,24 +22,24 @@ jobs:
           java-version: 11
           distribution: microsoft
           cache: maven
-      #- name: Synopsys Action Black Duck
-      #  uses: synopsys-sig/synopsys-action@main
-      #  with:
-      #    github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Synopsys Action Black Duck
+        uses: synopsys-sig/synopsys-action@v1.2.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           
-      #    blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
-      #    blackduck_url: ${{ secrets.BLACKDUCK_URL }}
-      #    blackduck_scan_full: false
-      #    blackduck_automation_fixpr: false
-      #    blackduck_automation_prcomment: true
+          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          blackduck_url: ${{ secrets.BLACKDUCK_URL }}
+          blackduck_scan_full: false
+          blackduck_automation_fixpr: false
+          blackduck_automation_prcomment: true
           # Optional parameter, but usually specified - the location of the Synopsys Bridge software
           # The Synopsys Bridge software distribution is platform specific - this must match the host OS
           # of your runner. For example in this case, we are using the latest version for Linux.
           #bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
-      #  env:
+        env:
       #    DETECT_PROJECT_NAME: ${{ vars.BLACKDUCK_PROJECT }}
       #    DETECT_PROJECT_VERSION_NAME: demo-dev
-      #    BLACKDUCK_TRUST_CERT: true
+          BLACKDUCK_TRUST_CERT: true
           #DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
       - name: Synopsys Action Polaris
         uses: synopsys-sig/synopsys-action@main
