@@ -1,6 +1,7 @@
 package org.joychou.controller;
 
 import groovy.lang.GroovyShell;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ import java.io.InputStreamReader;
  *
  * @author JoyChou @ 2018-05-24
  */
+@Slf4j
 @RestController
 @RequestMapping("/rce")
 public class Rce {
@@ -55,8 +57,7 @@ public class Rce {
 
 
     /**
-     * http://localhost:8080/rce/ProcessBuilder?cmd=whoami
-     * @param cmd cmd
+     * <a href="http://localhost:8080/rce/ProcessBuilder?cmd=whoami">POC</a>
      */
     @GetMapping("/ProcessBuilder")
     public String processBuilder(String cmd) {
@@ -128,5 +129,10 @@ public class Rce {
         groovyShell.evaluate(content);
     }
 
+
+
+    public static void main(String[] args) throws Exception{
+        Runtime.getRuntime().exec("touch /tmp/x");
+    }
 }
 

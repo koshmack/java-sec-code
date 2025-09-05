@@ -3,7 +3,12 @@
 
 Java sec code is a very powerful and friendly project for learning Java vulnerability code.
 
-[中文文档](https://github.com/JoyChou93/java-sec-code/blob/master/README_zh.md) 😋[Alibaba Security Purple Team Recruitment](https://talent.alibaba.com/off-campus-position/937731?trace=qrcode_share)
+[中文文档](https://github.com/JoyChou93/java-sec-code/blob/master/README_zh.md) 😋
+
+## Recruitment
+
+[Alibaba-Security attack and defense/research（P5-P7）](https://github.com/JoyChou93/java-sec-code/wiki/Alibaba-Purple-Team-Job-Description)
+
 
 ## Introduce
 
@@ -41,12 +46,14 @@ Sort by letter.
 - [Log4j](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Log4j.java)
 - [ooxmlXXE](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/othervulns/ooxmlXXE.java)
 - [PathTraversal](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/PathTraversal.java)
+- [QLExpress](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/QLExpress.java)
 - [RCE](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Rce.java)
   - Runtime
   - ProcessBuilder
   - ScriptEngine
   - Yaml Deserialize  
   - Groovy
+- [Shiro](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Shiro.java)
 - [Swagger](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/config/SwaggerConfig.java)
 - [SpEL](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/SpEL.java)
 - [SQL Injection](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/SQLI.java)
@@ -145,7 +152,7 @@ Viarus
 Example:
 
 ```
-http://localhost:8080/java-sec-code-1.0.0/rce/exec?cmd=whoami
+http://localhost:8080/java-sec-code-1.0.0/rce/runtime/exec?cmd=whoami
 ```
 
 return:
@@ -203,12 +210,6 @@ Core developers : [JoyChou](https://github.com/JoyChou93), [liergou9981](https:/
 Other developers: [lightless](https://github.com/lightless233),  [Anemone95](https://github.com/Anemone95), [waderwu](https://github.com/waderwu). 
 
 
-## Donate
+## Support
 
-If you like the poject, you can donate to support me. With your support, I will be able to make `Java sec code` better 😎.
-
-### Alipay
-
-Scan the QRcode to support `Java sec code`.
-
-<img title="Alipay QRcode" src="https://aliyun-testaaa.oss-cn-shanghai.aliyuncs.com/alipay_qr.png" width="200">
+If you like the poject, you can star java-sec-code project to support me. With your support, I will be able to make `Java sec code` better 😎.

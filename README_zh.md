@@ -2,7 +2,11 @@
 
 对于学习Java漏洞代码来说，`Java Sec Code`是一个非常强大且友好的项目。
 
-[英文文档](https://github.com/JoyChou93/java-sec-code/blob/master/README.md) 😋[阿里集团安全紫军招聘](https://talent.alibaba.com/off-campus-position/937731?trace=qrcode_share)
+[英文文档](https://github.com/JoyChou93/java-sec-code/blob/master/README.md) 😋
+
+## 招聘
+
+[Alibaba招聘-安全攻防/研究（P5-P7）](https://github.com/JoyChou93/java-sec-code/wiki/Alibaba-Purple-Team-Job-Description)
 
 ## 介绍
 
@@ -36,12 +40,14 @@ joychou/joychou123
 - [Log4j](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Log4j.java)
 - [ooxmlXXE](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/othervulns/ooxmlXXE.java)
 - [PathTraversal](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/PathTraversal.java)
+- [QLExpress](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/QLExpress.java)
 - [RCE](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Rce.java)
     - Runtime
     - ProcessBuilder  
     - ScriptEngine
     - Yaml Deserialize
     - Groovy
+- [Shiro](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/Shiro.java)
 - [SpEL](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/SpEL.java)
 - [SQL Injection](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/SQLI.java)
 - [SSRF](https://github.com/JoyChou93/java-sec-code/blob/master/src/main/java/org/joychou/controller/SSRF.java)
@@ -137,7 +143,7 @@ Viarus
 例子：
 
 ```
-http://localhost:8080/java-sec-code-1.0.0/rce/exec?cmd=whoami
+http://localhost:8080/java-sec-code-1.0.0/rce/runtime/exec?cmd=whoami
 ```
  
 返回：
@@ -193,12 +199,7 @@ Tomcat默认JSESSION会话有效时间为30分钟，所以30分钟不操作会�
 
 核心开发者： [JoyChou](https://github.com/JoyChou93).其他开发者：[lightless](https://github.com/lightless233),  [Anemone95](https://github.com/Anemone95)。欢迎各位提交PR。
 
-## 捐赠
+## 支持
 
-如果你喜欢这个项目，你可以捐款来支持我。 有了你的支持，我将能够更好地制作`Java sec code`项目。
+如果你喜欢这个项目，你可以star该项目支持我。 有了你的支持，我将能够更好地制作`Java sec code`项目。
 
-### Alipay
-
-扫描支付宝二维码支持`Java sec code`。
-
-<img title="Alipay QRcode" src="https://aliyun-testaaa.oss-cn-shanghai.aliyuncs.com/alipay_qr.png" width="200">
