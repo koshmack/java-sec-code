@@ -37,3 +37,4 @@ jobs:
           blackducksca_reports_sarif_create: false
           blackducksca_upload_sarif_report: false
           blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
+          detect_args: "--detect.excluded.detector.types=GIT"
