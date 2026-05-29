@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Optional;
 
-public class UserRepository {
+public class MkSqlInjection {
     private final String jdbcUrl = "jdbc:mysql://localhost:3306/appdb";
     private final String dbUser = "app";
     private final String dbPass = "secret";
