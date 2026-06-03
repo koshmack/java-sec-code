@@ -1,20 +1,21 @@
 package org.joychou.security;
 
 public class MkHardCodedPass{
+// Vulnerability: hard-coded secret in source code
+    private static final String ADMIN_PASSWORD = "SuperSecret123!";
+
+    public static boolean login(String username, String password) {
+        return "admin".equals(username) && ADMIN_PASSWORD.equals(password);
+    }
 
     public static void main(String[] args) {
-        String username = "admin";
-        String password = "P@ssw0rd123"; // Vulnerability: hard-coded credential
+        String inputUser = "admin";
+        String inputPass = "SuperSecret123!";
 
-        if (authenticate(username, password)) {
-            System.out.println("Login successful");
+        if (login(inputUser, inputPass)) {
+            System.out.println("Login success");
         } else {
             System.out.println("Login failed");
         }
-    }
-
-    private static boolean authenticate(String username, String password) {
-        // Simulated auth check
-        return "admin".equals(username) && "P@ssw0rd123".equals(password);
     }
 }
