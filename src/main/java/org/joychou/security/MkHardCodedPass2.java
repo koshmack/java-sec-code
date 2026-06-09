@@ -6,7 +6,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class MkHardCodedPass2 {
 /**
  * Hard-coded password vulnerability demo (CWE-259 / OWASP A07).
  *
@@ -16,8 +15,8 @@ public class MkHardCodedPass2 {
  * @author security-researcher
  */
 @RestController
-@RequestMapping("/hardcodedpassword")
-public class HardCodedPassword {
+@RequestMapping("/mkhardcodedpass2")
+public class MkHardCodedPass2 {
 
     // -----------------------------------------------------------------------
     // VULNERABLE – hard-coded credentials embedded directly in source code.
@@ -66,6 +65,4 @@ public class HardCodedPassword {
             return "SAFE: DB connection failed – " + e.getMessage();
         }
     }
-}
-    
 }
